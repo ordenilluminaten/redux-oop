@@ -1,0 +1,35 @@
+{
+  "name": "vue-redux-ts",
+  "version": "1.0.0",
+  "description": "Powerful extensitions for building class-based Redux architecture powered by TypeScript.",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenondrums/reducer-class.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keenondrums/reducer-class/issues"
+  },
+  "homepage": "https://github.com/keenondrums/reducer-class#readme",
+  "keywords": [
+    "redux",
+    "oop",
+    "store",
+    "state",
+    "class",
+    "decorator",
+    "decorated",
+    "reducer",
+    "typescript",
+    "middleware"
+  ],
+  "author": "Mikhail Shtanko",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.4",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}

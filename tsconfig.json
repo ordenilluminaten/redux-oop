@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es2015",
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": false,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "baseUrl": ".",
+        "declaration": true,
+        "outDir": "dist",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        "lib": [
+            "es2015",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ]
+    }
+}
