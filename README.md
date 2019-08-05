@@ -126,11 +126,7 @@ export class FetchUsersFailureAction extends Action {
 ```ts
 import { Reducer, ActionDecorator as Action } from 'redux-typed-kit';
 import UsersState from '../models/states/users-state';
-import {
-  FetchUsersAction,
-  FetchUsersSuccessAction,
-  FetchUsersFailureAction
-} from '../actions/fetch-users-action';
+import { FetchUsersAction, FetchUsersSuccessAction, FetchUsersFailureAction } from '../actions/fetch-users-action';
 
 export default class UsersReducer extends Reducer<UsersState> {
   initialState = new UsersState();
@@ -144,10 +140,7 @@ export default class UsersReducer extends Reducer<UsersState> {
   }
 
   @Action
-  fetchUsersSuccess(
-    state: UsersState,
-    action: FetchUsersSuccessAction
-  ): UsersState {
+  fetchUsersSuccess(state: UsersState, action: FetchUsersSuccessAction): UsersState {
     return state.rebuild(x => {
       x.users = action.response.users;
       x.isLoading = false;
@@ -155,10 +148,7 @@ export default class UsersReducer extends Reducer<UsersState> {
   }
 
   @Action
-  fetchUsersFailure(
-    state: UsersState,
-    action: FetchUsersFailureAction
-  ): UsersState {
+  fetchUsersFailure(state: UsersState, action: FetchUsersFailureAction): UsersState {
     return state.rebuild(x => {
       x.error = action.error;
       x.isLoading = false;
@@ -173,11 +163,7 @@ export default class UsersReducer extends Reducer<UsersState> {
 
 ```ts
 import { CombinedReducer } from 'redux-typed-kit';
-export default new CombinedReducer(
-  'complexState',
-  new SimpleReducer(),
-  new AnotherSimpleReducer()
-);
+export default new CombinedReducer('complexState', new SimpleReducer(), new AnotherSimpleReducer());
 ```
 
 #### RootReducer
