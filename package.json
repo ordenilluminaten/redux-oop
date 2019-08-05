@@ -1,16 +1,32 @@
 {
-  "name": "vue-redux-ts",
-  "version": "1.0.0",
+  "name": "redux-typed-kit",
+  "version": "0.0.2",
+  "author": "Mikhail Shtanko",
+  "license": "MIT",
   "description": "Powerful extensitions for building class-based Redux architecture powered by TypeScript.",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ],
+  "npmName": "redux",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keenondrums/reducer-class.git"
+    "url": "git+https://github.com/ordenilluminaten/redux-oop.git"
   },
   "bugs": {
-    "url": "https://github.com/keenondrums/reducer-class/issues"
+    "url": "https://github.com/ordenilluminaten/redux-oop/issues"
   },
-  "homepage": "https://github.com/keenondrums/reducer-class#readme",
+  "homepage": "https://github.com/ordenilluminaten/redux-oop#readme",
   "keywords": [
     "redux",
     "oop",
@@ -21,10 +37,9 @@
     "decorated",
     "reducer",
     "typescript",
-    "middleware"
+    "middleware",
+    "action"
   ],
-  "author": "Mikhail Shtanko",
-  "license": "MIT",
   "dependencies": {
     "redux": "^4.0.4",
     "reflect-metadata": "^0.1.13"
