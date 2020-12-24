@@ -1,7 +1,8 @@
+export declare type ActionType = string | number;
 export default class Action {
-    public type: string = this.constructor.name;
+    public type: ActionType = this.constructor.name;
 
-    getJSON() {
+    toPlainObject() {
         const obj: any = {};
         for (var x in this) {
             if (x === "toJSON" || x === "constructor") {

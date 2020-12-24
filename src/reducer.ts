@@ -1,15 +1,15 @@
 import 'reflect-metadata';
 import State from './state';
 import { Reducer as ReduxReducer } from 'redux';
-import Action from './action';
+import Action, { ActionType } from './action';
 import { METADATA_KEY_ACTION } from './constants';
 
 export default class Reducer<T extends State> {
     initialState: T;
-    mapping: Map<string, Array<(state: T, action: any) => T>> = new Map();
+    mapping: Map<ActionType, Array<(state: T, action: any) => T>> = new Map();
     name: string | null;
 
-    private executeReducer(state: T, action: Action, actionType?: string): T {
+    private executeReducer(state: T, action: Action, actionType?: ActionType): T {
         const funcs = this.mapping.get(actionType || action.type);
         let resState = state;
         if (funcs != null) {

@@ -39,16 +39,11 @@ export default class Store<S extends State> {
         return this.p_store.subscribe(listener);
     }
 
-    public getState(): S {
-        return this.p_store.getState();
-    }
-
     public get state(): S {
         return this.p_store.getState();
     }
 
     public dispatch<A extends Action>(action: A): Dispatch<AnyAction> {
-
-        return this.p_store.dispatch(action.getJSON());
+        return this.p_store.dispatch(action.toPlainObject());
     }
 }

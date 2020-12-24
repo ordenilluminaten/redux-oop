@@ -1,5 +1,5 @@
 import Action from './action';
-import ActionHandler from './decorators/action';
+import { ActionHandler } from './decorators/action';
 import { PreMiddlewareHandler, PostMiddlewareHandler } from './decorators/middleware-action';
 import Reducer from './reducer';
 import RootReducer from './root-reducer';
