@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "target": "es2015",
-        "module": "es2015",
+        "target": "es5",
+        "module": "esnext",
         "strict": true,
         "strictPropertyInitialization": false,
-        "importHelpers": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
@@ -12,19 +11,22 @@
         "skipLibCheck": false,
         "sourceMap": true,
         "noImplicitAny": false,
-        "baseUrl": ".",
         "declaration": true,
-        "outDir": "dist",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ]
-        },
+        "types": [
+            "node",
+        ],
         "lib": [
-            "es2015",
             "dom",
             "dom.iterable",
-            "scripthost"
-        ]
-    }
+            "esnext"
+        ],
+        "outDir": "./dist/",
+        "baseUrl": ".",
+    },
+    "exclude": [
+        "./node_modules",
+    ],
+    "include": [
+        "."
+    ]
 }
